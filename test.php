@@ -8,20 +8,13 @@
 
 require_once('LCS.php');
 
-$str1 = "-MAEEEVAKLEKHLMLLRQEYVKLQKKLAETEKRCALLAAQANKESSSESFISRLLAIVAD";
-$str2 = "-MAEEEVAKLEKHLMLLRQEYVKLQKKLAETEKRCTLLAAQANKENSNESFISRLLAIVAG";
+$str1 = "-9pks63ebel";
+$str2 = "-9pk63ebel2";
 
+$lcs = new LCS();
+$lcs->Calculate($str1, $str2);
 
-$c = array_fill(0, strlen($str1), array_fill(0, strlen($str2), array()));
-$b = array_fill(0, strlen($str2), array_fill(0, strlen($str2), array()));
-
-
-echo 'str1: ' . $str1 . '<br />';
-echo 'str2: ' . $str2 . '<br />';
-LCS($str1, $str2, $c, $b);
 echo "Longest Common String: ";
-PRINT_LCS($b, $str1, strlen($str1), strlen($str2));
+echo $lcs->__get('commonString');
 echo '<br />';
-echo 'Match Rate: ' . $c[strlen($str1)][strlen($str2)] / strlen($str1) * 100 . '%';
-
-//var_dump($c);
+echo 'Match Rate: ' . ($lcs->__get('length') - 1) / (strlen($str1) - 1) * 100 . '%';
