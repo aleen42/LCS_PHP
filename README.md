@@ -1,6 +1,11 @@
-# LCS_PHP
-## Longest Common Subsequence Problem(最長公共子序列)
+# LCS_PHP 
+
+[![Build Status](https://travis-ci.org/SoundTooth/LCS_PHP.svg?branch=master)](https://travis-ci.org/SoundTooth/LCS_PHP)
+
 ### Overview
+
+- 該項目意在通過 PHP 實現 Longest Common Subsequence Problem (最長公共子序列)的求解.
+
 <img src="./overview.png">
 
 - 求出最短裝配時間
